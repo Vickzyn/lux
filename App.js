@@ -5,7 +5,7 @@ import { SafeAreaView, View,Text, TouchableOpacity, StyleSheet, ScrollView, Text
  export default function App() {
   const [pagina, setPagina] = useState('home');
   return( 
-    <SafeAreaView style={StyleSheet.container}>
+    <SafeAreaView style={styles.container}>
       <Header pagina={pagina} setPagina={setPagina} />
       <ScrollView contentContainerStyle={styles.content}>
       {pagina == 'home' && <Home />}
@@ -30,7 +30,7 @@ function Header({pagina, setPagina}) {
           onPress={()=> setPagina(p)}
         >
         <Text style={styles.navButtonText}>{p.charAt(0).toUpperCase() +p.slice(1)}</Text>
-        </TouchableOpacity>)} 
+        </TouchableOpacity>
         ))}
       </View>
     </View>
@@ -41,7 +41,7 @@ function Home() {
   return (
    <View style={styles.section}>
     <Text style={styles.title}>Bem-vindo à lux</Text>
-    <Text>Somos a empresa da inovação em tênis de corrida</Text>
+    <Text>Somos a empresa da inovação em tênis de corrida.</Text>
    </View>
   );
 }
@@ -50,8 +50,8 @@ function Sobre() {
   return (
    <View style={styles.section}>
     <Text style={styles.title}>Sobre nós</Text>
-    <Text>Somos a empresa da inovação em tênis de corrida</Text>
-    <text>Fundada em agosto de 2025, temos compromisso com o bem-estar dos nossos clientes.</text>
+    <Text>Somos a empresa da inovação em tênis de corrida.</Text>
+    <Text>Fundada em agosto de 2025, temos compromisso com o bem-estar dos nossos clientes.</Text>
    </View>
   );
 }
@@ -75,7 +75,7 @@ function Contato() {
 
   function enviar() {
     if (!nome || !email || !mensagem) {
-      Alert.alert('Erro', 'Por favor preencha todos os campos');
+      Alert.alert('Erro', 'Por favor preencha todos os campos.');
       return;
     }
     Alert.alert('mensagem enviada', `Obrigado, ${nome}! Retornaremos em breve.`);
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
     input: { 
       backgroundColor: 'white',
       borderColor: '#ccc',
-      borderWidth: '1',
+      borderWidth: 1,
       paddingHorizontal: 10,
       paddingVertical: 8,
       borderRadius: 4,
@@ -158,9 +158,13 @@ const styles = StyleSheet.create({
       borderRadius: 6,
       alignItems: 'center',
     },
+    //aham
+    //ola
+    //bao
+    
     buttonText: { color: 'white', fontWeight: 'bold', fontSize: 16},
     footer: { backgroundColor: '#00264d', padding: 15, alignItems: 'center'},
-  });
+});
  
 
     
