@@ -158,6 +158,7 @@ const styles = StyleSheet.create({
       borderRadius: 6,
       alignItems: 'center',
     },
+    //aham
     buttonText: { color: 'white', fontWeight: 'bold', fontSize: 16},
     footer: { backgroundColor: '#00264d', padding: 15, alignItems: 'center'},
 });
